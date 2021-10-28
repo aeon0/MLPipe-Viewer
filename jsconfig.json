@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+      },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "dist",
+        "build",
+        "public"
+    ]
+}

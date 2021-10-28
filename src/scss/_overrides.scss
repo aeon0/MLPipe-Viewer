@@ -1,0 +1,44 @@
+// Ideally this file should be empty, but sometimes styles from  other
+// modules (mainly MDC) need to be overriden e.g. for for quick fixes
+// Please document your fixes well, that way it is easier to know if they are still needed on updates
+
+// Changing the dialog header styles to be colored in primary color
+.mdc-dialog__title {
+    background: $mdc-theme-primary;
+    color: white !important;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+// Otherwise the width of dialogs does not use respect the width of its content
+// Downside, clicking outside of the dialog (left or right) does not close it...
+/*
+.mdc-dialog__container {
+    width: 100%;
+    .mdc-dialog__surface{
+        width: 100%;
+        position: relative;
+    }
+}
+*/
+
+// Full screen dialogs for mobile
+@media screen and (max-width: 480px){
+    .mdc-dialog__container {
+        height: 100%;
+        width: 100%;
+    }
+    .mdc-dialog__surface {
+      width: 100%;
+      height: 100%;
+      max-height: 100% !important;
+      max-width: 100% !important;
+      overflow: auto;
+    }
+}
+
+// To also show over dialog overlays
+.mdc-snackbar{
+    z-index: 99;
+}

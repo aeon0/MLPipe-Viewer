@@ -1,0 +1,23 @@
+#login-page{
+    max-width: 650px;
+
+    form {
+        width: 100%;
+        max-width: 400px;
+        > * {
+            display: block;
+            width: calc(100% - 52px);
+            margin-left: 26px;
+            margin-bottom: 14px;
+        }
+        #login-btn{
+            height: 45px;
+            //border: 1px solid $mdc-theme-primary;
+        }
+    }
+
+    #login-progress-bar{
+        position: absolute;
+        top: 0px;
+    }
+}

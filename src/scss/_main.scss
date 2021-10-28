@@ -1,0 +1,65 @@
+// Includes all styles that are globally valid for all components
+
+html, #root {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    background: $mdc-theme-background;
+}
+
+body{
+    //font-family: Roboto; 
+    //font-family: 'Open Sans', sans-serif;
+    font-family: $mdc-typography-font-family;
+    font-size: 16px;
+
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background: white;
+    @media screen and (max-width: $size-phone){
+        font-size: 14px;
+    }
+}
+
+h1, h2, h3, h4{
+    color: #333;
+}
+
+.link-style{
+    @include link-style();
+}
+
+.flex-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-top: 40px;
+    flex-direction: column;
+    position: relative;
+
+    @media screen and (max-width: $size-tablet){
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+.default-textarea {
+    width: 100%;
+    margin-top: 20px;
+    min-height: 60px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
